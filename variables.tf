@@ -5,23 +5,26 @@
 variable "project_id" {
   type        = string
   description = "GCP Project ID to provision resources in."
+  default     = "htc-ref-backstage-gcp-devx"
 }
 
 
 variable "region" {
   type        = string
   description = "GCP Region to provision resources in."
+  default     = "asia-south1"
 }
 
 variable "gar_repository_location" {
   type        = string
   description = "Location of the Google Artifact Registry repository,"
+  default     = "asia-south1"
 }
 
 variable "gar_repository_id" {
   type        = string
   description = "Google Artifact Registry repository ID."
-  default     = "htc-ref-arch"
+  default     = "htc-ref-backstage-gcp-devx"
 }
 
 ##########################################
@@ -37,17 +40,23 @@ variable "humanitec_prefix" {
 variable "with_backstage" {
   description = "Deploy Backstage"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "github_org_id" {
   description = "GitHub org id (required for Backstage)"
   type        = string
-  default     = null
+  default     = "ltim-de"
+}
+
+variable "github_token" {
+  description = "GitHub token (required for Backstage)"
+  type        = string
+  default     = "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"
 }
 
 variable "humanitec_org_id" {
   description = "Humanitec Organization ID."
   type        = string
-  default     = null
+  default     = "demo-humanitec"
 }

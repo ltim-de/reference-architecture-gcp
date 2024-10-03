@@ -1,18 +1,18 @@
 
 # Google Artifact Registry repository ID.
-gar_repository_id = ""
+gar_repository_id = "htc-ref-backstage-gcp-devx"
 
 # Location of the Google Artifact Registry repository.
-gar_repository_location = ""
+gar_repository_location = "asia-south1"
 
 # GitHub org id
-github_org_id = ""
+github_org_id = "ltim-de"
 
 # Humanitec CI Service User Token
-humanitec_ci_service_user_token = ""
+humanitec_ci_service_user_token = "RVC24hAgO6KZv45dEyLyoOAc0bqWotwNes-GucP6QZWe"
 
 # Humanitec Organization ID.
-humanitec_org_id = ""
+humanitec_org_id = "demo-humanitec"
 
 # GCP Project ID to provision resources in.
-project_id = ""
+project_id = "htc-ref-backstage-gcp-devx"

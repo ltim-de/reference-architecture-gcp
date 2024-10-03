@@ -5,11 +5,13 @@
 variable "project_id" {
   type        = string
   description = "GCP Project ID"
+  default     = "htc-ref-backstage-gcp-devx"
 }
 
 variable "region" {
   type        = string
   description = "GCP Region"
+  default     = "asia-south1"
 }
 
 # VPC Variables

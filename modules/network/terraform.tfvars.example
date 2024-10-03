@@ -1,9 +1,9 @@
 
 # GCP Project ID
-project_id = ""
+project_id = "htc-ref-backstage-gcp-devx"
 
 # GCP Region
-region = ""
+region = "asia-south1"
 
 # List of VPC Subnets
 subnets = ""

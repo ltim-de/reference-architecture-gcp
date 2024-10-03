@@ -5,17 +5,19 @@
 variable "project_id" {
   type        = string
   description = "GCP Project ID to provision resources in."
+  default     = "htc-ref-backstage-gcp-devx"
 }
 
 variable "region" {
   type        = string
   description = "GCP Region to provision resources in."
+  default     = "asia-south1"
 }
 
 variable "humanitec_org_id" {
   description = "Humanitec Organization ID."
   type        = string
-  default     = null
+  default     = "demo-humanitec"
 }
 
 ##########################################
@@ -25,7 +27,7 @@ variable "humanitec_org_id" {
 variable "humanitec_prefix" {
   type        = string
   description = "A prefix that will be attached to all IDs created in Humanitec."
-  default     = ""
+  default     = "htc-ref-arch-"
 }
 
 ##########################################
@@ -40,7 +42,7 @@ variable "vpc_name" {
 variable "vpc_description" {
   type        = string
   description = "VPC Description"
-  default     = "VPC for Humanitec Reference Architecture Implementation for GCP. https://github.com/humanitec-architecture/reference-archietcture-gcp"
+  default     = "VPC for Humanitec Reference Architecture Implementation for GCP. https://github.com/ltim-de/reference-archietcture-gcp"
 }
 
 variable "vpc_subnets" {
@@ -61,7 +63,7 @@ variable "vpc_subnets" {
   default = [
     {
       name          = "htc-ref-arch-subnet"
-      description   = "Subnet that hosts resources provisioned for the Humanitec Reference Architecture Implementation for GCP. https://github.com/humanitec-architecture/reference-archietcture-gcp"
+      description   = "Subnet that hosts resources provisioned for the Humanitec Reference Architecture Implementation for GCP. https://github.com/ltim-de/reference-archietcture-gcp"
       ip_cidr_range = "10.128.0.0/20"
     }
   ]
@@ -92,11 +94,11 @@ variable "gke_autopilot" {
 variable "gar_repository_id" {
   type        = string
   description = "ID of the Google Artifact Registry repository (not created if empty)."
-  default     = null
+  default     = "htc-ref-backstage-gcp-devx"
 }
 
 variable "gar_repository_location" {
   type        = string
   description = "Location of the Google Artifact Registry repository (required when gar_repository_id is set)."
-  default     = null
+  default     = "asia-south1"
 }

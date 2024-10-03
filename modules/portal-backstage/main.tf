@@ -20,7 +20,7 @@ locals {
 }
 
 module "portal_backstage" {
-  source = "github.com/humanitec-architecture/shared-terraform-modules?ref=v2024-06-12//modules/portal-backstage"
+  source = "github.com/ltim-de/shared-terraform-modules/modules/portal-backstage"
 
   cloud_provider = "gcp"
 
@@ -45,13 +45,29 @@ locals {
 # in-cluster postgres
 
 module "backstage_postgres" {
-  source = "github.com/humanitec-architecture/resource-packs-in-cluster?ref=v2024-06-05//humanitec-resource-defs/postgres/basic"
+  source = "github.com/ltim-de/resource-packs-in-cluster/humanitec-resource-defs/postgres/basic"
 
   prefix = local.res_def_prefix
 }
 
+# in-cluster redis
+
+module "backstage_redis" {
+  source = "github.com/ltim-de/resource-packs-in-cluster/humanitec-resource-defs/redis/basic"
+
+  prefix = local.res_def_prefix
+}
+
+
 resource "humanitec_resource_definition_criteria" "backstage_postgres" {
   resource_definition_id = module.backstage_postgres.id
+  app_id                 = humanitec_application.backstage.id
+
+  force_delete = true
+}
+
+resource "humanitec_resource_definition_criteria" "backstage_redis" {
+  resource_definition_id = module.backstage_redis.id
   app_id                 = humanitec_application.backstage.id
 
   force_delete = true

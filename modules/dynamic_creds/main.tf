@@ -40,7 +40,7 @@ resource "google_service_account_iam_binding" "iam-binding" {
   role               = "roles/iam.workloadIdentityUser"
 
   members = [
-    "principal://iam.googleapis.com/projects/${data.google_project.project.number}/locations/global/workloadIdentityPools/humanitec-wif-pool/subject/${var.humanitec_org}/${humanitec_resource_account.cloud_account.id}",
+    "principal://iam.googleapis.com/projects/${data.google_project.project.number}/locations/global/workloadIdentityPools/htc-wif-pool-ltim-wday/subject/${var.humanitec_org}/${humanitec_resource_account.cloud_account.id}",
   ]
 }
 

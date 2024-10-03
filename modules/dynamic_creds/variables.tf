@@ -1,11 +1,12 @@
 variable "gcp_project_id" {
   type        = string
   description = "The ID of the GCP project to which resources will be deployed."
+  default     = "htc-ref-backstage-gcp-devx"
 }
 
 variable "gcp_workload_identity_pool_id" {
   type        = string
-  default     = "humanitec-wif-pool"
+  default     = "htc-wif-pool-ltim-wday"
   description = "The ID of the Workload Identity Pool in GCP, which allows you to manage resources within the GCP project."
 }
 
@@ -24,4 +25,5 @@ variable "gcp_service_account_id" {
 variable "humanitec_org" {
   type        = string
   description = "The identifier of the Humanitec organization used for managing deployments and resources."
+  default     = "demo-humanitec"
 }

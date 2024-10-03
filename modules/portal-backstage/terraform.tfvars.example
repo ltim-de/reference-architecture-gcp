@@ -1,24 +1,23 @@
 
 # GitHub App Client ID
-github_app_client_id = ""
+github_app_client_id = "Iv23liGH6VgiVGr96ZnU"
 
 # GitHub App Client Secret
-github_app_client_secret = ""
+github_app_client_secret = "70e7241718c880aff9a3839228f64c0057285d8e"
 
 # GitHub App ID
-github_app_id = ""
+github_app_id = "1008077"
 
 # GitHub App Private Key
-github_app_private_key = ""
+github_app_private_key = "/EbsX27vUjIcmMBFtNs8VYDz0qHm5CnCcPGGHn7PO9s="
 
 # GitHub org id
-github_org_id = ""
+github_org_id = "ltim-de"
 
 # GitHub Webhook Secret
-github_webhook_secret = ""
-
+github_webhook_secret = "5f2930110ed900f5141cffdab33a6f11eba922f4
 # Humanitec CI Service User Token
-humanitec_ci_service_user_token = ""
+humanitec_ci_service_user_token = "RVC24hAgO6KZv45dEyLyoOAc0bqWotwNes-GucP6QZWe"
 
 # Humanitec Organization ID
-humanitec_org_id = ""
+humanitec_org_id = "demo-humanitec"

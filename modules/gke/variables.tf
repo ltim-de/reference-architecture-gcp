@@ -1,11 +1,13 @@
 variable "project_id" {
   type        = string
   description = "GCP Project ID"
+  default     = "htc-ref-backstage-gcp-devx"
 }
 
 variable "region" {
   type        = string
   description = "GCP Region"
+  default     = "asia-south1"
 }
 
 variable "vpc_name" {
@@ -62,11 +64,11 @@ variable "node_size" {
 variable "gar_repository_id" {
   description = "The ID of the Google Artifact Registry repository to use for storing Docker images."
   type        = string
-  default     = null
+  default     = "htc-ref-backstage-gcp-devx"
 }
 
 variable "gar_repository_location" {
   description = "Location of the Google Artifact Registry repository."
   type        = string
-  default     = null
+  default     = "asia-south1"
 }

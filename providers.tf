@@ -34,7 +34,14 @@ provider "humanitec" {
 
 provider "github" {
   owner = var.github_org_id
+  #owner = "ltim-de"
+  token = var.github_token
+  #token = "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"
 }
+output "printing_token" {
+  value = var.github_token
+}
+
 
 provider "google" {
   project = var.project_id
