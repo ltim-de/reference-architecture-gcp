@@ -52,7 +52,7 @@ variable "github_org_id" {
 variable "github_token" {
   description = "GitHub token (required for Backstage)"
   type        = string
-  default     = ""
+  
 }
 
 variable "humanitec_org_id" {
